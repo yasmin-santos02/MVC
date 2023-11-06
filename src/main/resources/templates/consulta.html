@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>MVC - Consultas</title>
+
+</head>
+<body>
+<h1> Lista de Agendados</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Médicos</th>
+        <th>Pacientes</th>
+        <th>Preço</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="consulta: ${consulta}" >
+        <td th:text="${consulta.medico}">Médico</td>
+        <td th:text="${consulta.paciente}">Paciente</td>
+        <td th:text="${consulta.valorConsulta}">Valor</td>
+    </tr>
+    </tbody>
+</table>
+
+<hr>
+</body>
+</html>
